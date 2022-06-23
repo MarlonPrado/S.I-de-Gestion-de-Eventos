@@ -1,0 +1,283 @@
+.admin-nav {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.admin-text {
+  font-size: 20px;
+  margin-left: 50px;
+}
+.admin-text1 {
+  font-size: 20px;
+  margin-left: var(--dl-space-space-twounits);
+}
+.admin-text2 {
+  font-size: 20px;
+  margin-left: var(--dl-space-space-twounits);
+}
+.admin-text3 {
+  font-size: 20px;
+  margin-left: var(--dl-space-space-twounits);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 767px) {
+  .admin-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .admin-text {
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .admin-text1 {
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .admin-text2 {
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .admin-text3 {
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+}
+
+.registro-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.registro-header {
+  width: 100%;
+  height: 117px;
+  display: flex;
+  max-width: var(--dl-size-size-maxwidth);
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  border-color: var(--dl-color-gray-black);
+  border-style: dashed;
+  border-width: 1px;
+  padding-left: var(--dl-space-space-threeunits);
+  padding-right: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: space-between;
+  background-color: #84d860;
+}
+.registro-container1 {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.registro-image {
+  width: 171px;
+  height: 96px;
+  object-fit: cover;
+}
+.registro-nav {
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  display: flex;
+  align-items: center;
+  padding-left: var(--dl-space-space-twounits);
+  flex-direction: row;
+}
+.registro-btn-group {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.registro-burger-menu {
+  display: none;
+}
+.registro-icon {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+  display: none;
+}
+.registro-mobile-menu {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  padding: 32px;
+  z-index: 100;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.registro-nav1 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.registro-container2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--dl-space-space-threeunits);
+  justify-content: space-between;
+}
+.registro-image1 {
+  height: 2rem;
+}
+.registro-close-mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.registro-icon02 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+}
+.registro-icon04 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+  margin-right: var(--dl-space-space-twounits);
+}
+.registro-icon06 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+  margin-right: var(--dl-space-space-twounits);
+}
+.registro-icon08 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+}
+.registro-container3 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: center;
+}
+.registro-form {
+  width: 641px;
+  height: 541px;
+  position: relative;
+  align-self: stretch;
+  padding-top: var(--dl-space-space-threeunits);
+  padding-left: var(--dl-space-space-twounits);
+  padding-right: var(--dl-space-space-twounits);
+  padding-bottom: var(--dl-space-space-threeunits);
+}
+.registro-text3 {
+  top: 0px;
+  left: 0px;
+  color: #2ff739;
+  right: 0px;
+  width: 437px;
+  height: 46px;
+  margin: auto;
+  position: absolute;
+  text-align: left;
+}
+.registro-footer {
+  width: 100%;
+  display: flex;
+  max-width: var(--dl-size-size-maxwidth);
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  padding-left: var(--dl-space-space-threeunits);
+  padding-right: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: space-between;
+  background-color: #41c76b;
+}
+.registro-image2 {
+  height: 2rem;
+  object-fit: cover;
+}
+.registro-icon-group1 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.registro-icon10 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+  margin-right: var(--dl-space-space-twounits);
+}
+.registro-icon12 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+  margin-right: var(--dl-space-space-twounits);
+}
+.registro-icon14 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+}
+@media(max-width: 991px) {
+  .registro-icon {
+    display: flex;
+  }
+}
+@media(max-width: 767px) {
+  .registro-header {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+  .registro-nav {
+    display: none;
+  }
+  .registro-btn-group {
+    display: none;
+  }
+  .registro-burger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .registro-footer {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+  .registro-text4 {
+    text-align: center;
+    margin-left: var(--dl-space-space-unit);
+    margin-right: var(--dl-space-space-unit);
+  }
+}
+@media(max-width: 479px) {
+  .registro-header {
+    padding: var(--dl-space-space-unit);
+  }
+  .registro-mobile-menu {
+    padding: 16px;
+  }
+  .registro-footer {
+    padding: var(--dl-space-space-unit);
+    flex-direction: column;
+  }
+  .registro-image2 {
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .registro-text4 {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+}

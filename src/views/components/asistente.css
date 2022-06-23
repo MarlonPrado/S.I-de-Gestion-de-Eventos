@@ -1,0 +1,27 @@
+.asistente-nav {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.asistente-text {
+  font-size: 20px;
+  margin-left: 50px;
+}
+.asistente-text1 {
+  font-size: 20px;
+  margin-left: var(--dl-space-space-twounits);
+}
+@media(max-width: 767px) {
+  .asistente-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .asistente-text {
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .asistente-text1 {
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+}

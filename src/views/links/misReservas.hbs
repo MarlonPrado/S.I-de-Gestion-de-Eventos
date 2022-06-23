@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Login-Modify - Mature Optimal Hedgehog</title>
+    <meta
+      property="og:title"
+      content="Login-Modify - Mature Optimal Hedgehog"
+    />
+    <meta
+      property="og:title"
+      content="Login-Modify1 - Mature Optimal Hedgehog"
+    />
+    <meta property="og:title" content="db-c-evento - Mature Optimal Hedgehog" />
+    <meta property="og:title" content="Dashboard - Mature Optimal Hedgehog" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+     <link href="/css/dashboard.css" rel="stylesheet" />
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div>
+           <link rel="stylesheet" href="/css/estilo.css" />
+      <link href="/css/login-modify.css" rel="stylesheet" />
+ 
+      <div class="dashboard-container">
+        <header data-role="Header" class="dashboard-header" style="margin-bottom: 200px;">
+          <div class="dashboard-container01">
+            <img
+              alt="image"
+              src="/img/public/playground_assets/pixlr-bg-result%20%5B2%5D-200h.png"
+              class="dashboard-image"
+            />
+            <nav>
+		<ul class="menu-horizontal">
+			
+    
+      <li>
+				<a href="">Eventos</a>
+				<ul class="menu-vertical">
+					<li><a href="ListEventos">Lista de Eventos</a></li>
+					<li><a href="registrarEvento">Crear Evento</a></li>
+					<li><a href="misReservas">Mis reservas</a></li>
+				</ul>
+			</li>
+       <li>
+				<a href="">Ponentes</a>
+				<ul class="menu-vertical">
+					<li><a href="">Ver ponentes</a></li>
+					
+				</ul>
+			</li>
+       <li>
+				<a href="cronograma">Cronograma</a>
+				<ul class="menu-vertical">
+					
+				</ul>
+			</li>
+      <li>
+				<a href="">Galeria</a>
+				
+				
+			</li>
+       
+      
+
+		</ul>
+	</nav>
+          </div>
+          <div class="dashboard-btn-group">
+            <button class="button">
+              <span><span><a href="/"> Cerrar Sesion</a></span></span>
+            </button>
+          </div>
+          
+        </header>
+        
+
+        </br>
+        </br>
+        <div class="login-modify-container3">
+          </br>
+          <form class="login-modify-hero" style="padding-bottom: 49px;" action="misReservas" method="POST">
+            <h1 class="login-modify-text03">
+              <span>Reserva un cupo</span>
+              <br />
+              <span>a un evento</span>
+            </h1>
+            <span class="login-modify-text07">
+              <span>
+                Selecciona un evento disponible, digita tu motivo principal
+              </span>
+              <br />
+              <span>
+                y ¡ reserva !, en el lateral derecho. veras tu registro de
+                peticion de reserva al evento
+              </span>
+            </span>
+           <span class="agendar-cita-medica-text02 textXS">
+                        Selecciona el evento para agendar:
+                      </span>
+                      <select  name="nombreEvento" class="form-select form-select-sm" aria-label=".form-select-sm example">
+  <option selected>Abra esta lista despegable</option>
+   {{#each leventosc2}}
+  <option value="{{nombre}}">{{nombre}} </option>
+  {{/each }}
+</select>
+            <input
+              type="text"
+              name="motivo"
+              placeholder="Razon Principal"
+              class="login-modify-textinput1 input"
+            />
+            <button class="login-modify-button1 button">¡Agendar Ahora!</button>
+          </form>
+   
+            <div class="login-modify-hero1" style="padding-bottom: 100px;padding-top: 250px;">
+              <h1 class="login-modify-text11">
+                <span>Lista de Reservas</span>
+              </h1>
+              <span class="login-modify-text13">
+                <span>
+                  Conozca tus reservas a tus eventos interesados, si estas
+                  deseado
+                </span>
+                <br />
+                <span>
+                  en cancelar un evento, no olvides cancelarlo desde el Boton
+                  CANCELAR, tus eventos son:
+                </span>
+              </span>
+              <table class="table table-dark table-bordered table-hover">
+            <style> .table{ background-color: whitesmoke;}</style>
+      <thead>
+        <tr>
+            <th>Codigo</th>
+          <th>ID + Nombre</th>
+          <th>Motivo</th>
+    
+          <th>Accion</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        {{#each lreserva}}
+            <tr>
+               <th>{{idr}}</th>
+              <td>{{nombreEvento}}</td>
+              <td>{{motivo}}</td>
+              
+              
+              <td>
+                 <a href="/deleteC/{{idc}}" class="btn btn-danger m-2"> Eliminar Prueba</a>
+                    <a href="/links/edit/{{idc}}" class="btn btn-secondary m-2"> Editar Prueba</a>
+            </tr>
+            {{/each}}
+      </tbody>
+    </table>
+              <button class="login-modify-button2 button">
+                ¡Agendar Ahora!
+              </button>
+            </div>
+            </div>
+    </div>
+        </div>
+         <footer class="dashboard-footer">
+          <img
+            alt="sasas"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAh1BMVEXiAxr///3////gAADhAADiABbhAAriABH+8/PqaW/75+b0trjjHCr//PrmSE7zq670urrzsbPypajmQUvnTlbpVl73yMnvkpXpYmj98fDkMjv87OzujZD52tn0v7/jCCHuh4vren3oUlnkIy/lLTn419bwnqDtf4Trc3nqZ2zlPEX74uLrbnSpxnbiAAAEn0lEQVR4nO3d6XKiQBSGYWgBTQyjMSZqTDTrZNH7v76pcpnS0Mtpz2lsyPf+jYiPFQEbbJIEIYTqrVs4My+cUxfOu2HLLcDxhasvIzF/XdMWzl9fxiF7WZqJ2VC5KjvGt+fWubDaLFys3Q9kNe6ahX2VOurZhK6Ft29PceF8ICsIHUForS1C3Yd/+5djYYBtDFloXpognN9pKqtCtRoNZBtdKqJQ3b7d/+x1oGhCNexo6mmEw04mW2dBFv4pKscJnRFVuMiqf9MLNQ9kld3RhdWHZBBCCKFAECYQQgghhOwgTCCEEEII2UGYxCDMdUMg5DxGMc4lzLvljNF2vCtuYcEfTIxemLKDEEIIZYQlo0YIS9Zu0QyMR5ga18IMQgghhBBCfhBCCCGEB8el7mtVD7MciUYqTMdTrzQvOHah5wCNbp2RC/2iD71CCCGEAUaEmyZM8smDV9fmp4pUmHheUfrVPKFf3k8FIYQQQugdhJUghLAlwtxQ0RZh8WroatoOoW0EJW2H0BWEEHoFYZVhFTJGZ+lC075IXyYpnMwvaQ1Y4zRLr/K1nDDJqNfr6FbWhLE2Xk0YL+UF4T4IWyT03N40T1i+P/q0+ts0oZp7XlFKPjqKRjg7w7UYvCDcByE7CE8Own0QsoPw5CDcV5vw3vOw0J1O2NcdYNYkpA460Us1Qu3UdfUIA8z3pxFaZvYLLwwVdWZICCH81cKF/DbmqK3QPVOy+WoBZvnbTdg2RxL598OTo49QwuBzie/W4r5uNBQQoQbkdwbWv3pWYwMur8K2W3ngtSzNQsKdA+rZH/J6Nt+iIpZjGl7q2byzgZAbhDJRhPIffq0w0FoIwnrGadKe+FpmZOH5xtp4PSiq8GzjpbyyCYQQnh6EMkGYQMgIQpkgTH67sCDPAqB54lAzDvxYM+u4tPjsX5PqP2menyzMaCsx9M4RZgPqlzTWL0o6Al8QTxXW86ugDm0l9lcAIYStFzo/5yJC1vbGcn6V8kvnb+Odhp+VmLB367z1srn1veWOx5Rfq5vO72YvYkI185xV8DjLyafzzzjwX2h+kawghBBCCCHkByGEEHoIA10yFIswnS0rN3f3aMk88q5DyPv29OW8YigCISc1hRDC1gtNCX3H52xiZITrZ0OfEwFhNudUSghDz0jHumJoqCSEzk/BGe+0uoAQwpYL6zl/yIonLD6pJ2J1Zw2aIKzrPD4nppAVhDJBmEDIKNiV7EdvUnRC7awRnh1NlhqbUOQHJavDfVN0QoHUI4QQHsYZZm+E0D1NgO1Y9YeQc3P4XeLC4pO1zUsPhEkhsSNU4kKJf61S7KRZfgUhhBCyhKzN8q48nJC1Sd28nvx7IlAwYe/PLaPN88rMGpEGE3Ku/Owe/zvwCyM0Lk0NQgghjEdY9tiV7zELVb8jsOc/evmxCSMbL4XQIwhPDsIEQgipQXhyECa/SXiTVb6eZwGEEselh3lcm/gxrTYRF65GA9lGK6rQMqe/5LcnifEo7fAUQWgprm/A2iCEsOFC90zJAidXgs+UbPndU3fsnJLBsjS9wLNd21bddY/MCwDPOGM5QggF6R+hHI+GbwCCpQAAAABJRU5ErkJggg=="
+            class="dashboard-image2"
+          />
+          <span class="dashboard-text19">
+            2022 -Todos los Derechos Reservados ©
+          </span>
+          <div class="dashboard-icon-group1">
+            <p>Conozca nuestro repositorio:  </p>
+            <i class="fab fa-github" style="font-size:24px;color:red"><a href="https://github.com/MarlonPrado/S.I-de-Gestion-de-Eventos"><span>Github</span></a></i>
+            <i class='fab fa-google-drive' style='font-size:36px'><a href="https://drive.google.com/drive/folders/13ZJQ-3iKCrNpjj5BrHP_97HvRlv8PRzG?usp=sharing"><span>Drive</span></i>
+          </div>
+        </footer>
+    
+  </body>
+</html>

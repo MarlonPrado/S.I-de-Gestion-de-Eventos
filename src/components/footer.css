@@ -1,0 +1,22 @@
+.footer-container {
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-doubleunit);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #2b2929;
+}
+.footer-text {
+  color: #e4e7ea;
+  font-size: 1.1rem;
+  align-self: center;
+  text-align: justify;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen","Ubuntu", "Cantarell", "Fira Sans","Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  line-height: 1.25;
+  text-decoration: none;
+}
+.footer-root-class-name {
+  background-color: #161616;
+}

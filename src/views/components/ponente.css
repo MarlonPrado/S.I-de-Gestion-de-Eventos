@@ -1,0 +1,35 @@
+.ponente-nav {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.ponente-text {
+  font-size: 20px;
+  margin-left: 50px;
+}
+.ponente-text1 {
+  font-size: 20px;
+  margin-left: var(--dl-space-space-twounits);
+}
+.ponente-text2 {
+  font-size: 20px;
+  margin-left: var(--dl-space-space-twounits);
+}
+@media(max-width: 767px) {
+  .ponente-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .ponente-text {
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .ponente-text1 {
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .ponente-text2 {
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+}

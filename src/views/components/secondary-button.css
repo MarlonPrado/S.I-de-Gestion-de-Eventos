@@ -1,0 +1,51 @@
+.secondary-button-container {
+  display: flex;
+  position: relative;
+}
+.secondary-button-button {
+  color: var(--dl-color-gray-white);
+  width: 153px;
+  height: 43px;
+  align-self: center;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.06);
+  text-align: center;
+  transition: 0.3s;
+  line-height: 1;
+  padding-top: var(--dl-space-space-unit);
+  border-width: 0px;
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-unit);
+  text-transform: uppercase;
+  background-color: var(--dl-color-secondary-300);
+}
+.secondary-button-button:hover {
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);
+}
+.secondary-button-button:active {
+  background-color: var(--dl-color-secondary-100);
+}
+.secondary-button-root-class-name {
+  margin-top: var(--dl-space-space-unitandhalf);
+}
+.secondary-button-root-class-name1 {
+  margin-top: var(--dl-space-space-unitandhalf);
+}
+.secondary-button-root-class-name2 {
+  margin-top: var(--dl-space-space-unitandhalf);
+}
+.secondary-button-root-class-name3 {
+  margin-top: var(--dl-space-space-unitandhalf);
+  background-color: #1e2f62;
+}
+.secondary-button-root-class-name4 {
+  margin-top: var(--dl-space-space-unitandhalf);
+  background-color: #1e2f62;
+}
+.secondary-button-root-class-name5 {
+  margin-top: var(--dl-space-space-unitandhalf);
+  background-color: #1e2f62;
+}
+.secondary-button-root-class-name6 {
+  margin-top: var(--dl-space-space-unitandhalf);
+}

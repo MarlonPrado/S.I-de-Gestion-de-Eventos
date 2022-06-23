@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Dashboard - Mature Optimal Hedgehog</title>
+    <meta property="og:title" content="Dashboard - Mature Optimal Hedgehog" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/estilo.css" />
+  </head>
+  <body style="margin-top: 0px;margin-bottom: 0px;margin-right: 0px;margin-left: 0px;">
+    
+    <div>
+      <link href="/css/dashboard.css" rel="stylesheet" />
+
+      <div class="dashboard-container">
+        <header data-role="Header" class="dashboard-header">
+          <div class="dashboard-container01">
+            <img
+              alt="image"
+              src="/img/public/playground_assets/pixlr-bg-result%20%5B2%5D-200h.png"
+              class="dashboard-image"
+            />
+            <nav>
+		<ul class="menu-horizontal">
+			
+    
+      <li>
+				<a href="">Eventos</a>
+				<ul class="menu-vertical">
+					<li><a href="ListEventos">Lista de Eventos</a></li>
+					<li><a href="registrarEvento">Crear Evento</a></li>
+					<li><a href="misReservas">Mis reservas</a></li>
+				</ul>
+			</li>
+       <li>
+				<a href="">Ponentes</a>
+				<ul class="menu-vertical">
+					<li><a href="">Ver ponentes</a></li>
+					
+				</ul>
+			</li>
+       <li>
+				<a href="cronograma">Cronograma</a>
+				<ul class="menu-vertical">
+					
+				</ul>
+			</li>
+      <li>
+				<a href="">Galeria</a>
+				
+				
+			</li>
+       
+      
+
+		</ul>
+	</nav>
+          </div>
+          <div class="dashboard-btn-group">
+            <button class="button">
+              <span><span><a href="/"> Cerrar Sesion</a></span></span>
+            </button>
+          </div>
+          
+        </header>
+        
+</br>
+<head>
+<meta charset='utf-8' />
+<link href='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.css' rel='stylesheet' />
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/
+bootstrap.min.css'>
+<link href='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/lib/moment.min.js'></script>
+<script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/lib/jquery.min.js'></script>
+<script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min
+.js'></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,basicWeek,basicDay'
+      },
+      defaultDate: '2022-06-01',
+      navLinks: true, // can click day/week names to navigate views
+      editable: false,
+      eventLimit: true, // allow "more" link when too many events
+
+      
+           events: [ 
+           {{#each leventosc }}
+        {
+          title: '{{nombre}}', 
+          description: '{{descrp}}', 
+          start: '{{fechai}}',
+
+          end: '{{fechaf}}',
+           backgroundColor:'green'
+        },
+        
+       {{/each }}
+        {
+          title: 'El evento chistoso',
+          start: '2001-03-07',
+             
+          end: '2001-03-10',
+          backgroundColor:'green'
+        }
+        
+      ],
+
+       
+
+
+
+      eventClick: function(calEvent, jsEvent, view, resourceObj) {
+          swal({
+            title: calEvent.title,
+            text: "Inicia el: "+moment(calEvent.start).format("MMMM Do YYYY, h:mm a") + "\n Finaliza el: "+moment(calEvent.end).format("MMMM Do YYYY, h:mm a"),
+            
+            icon: "success",
+            
+           
+          });
+          
+      }
+
+
+
+      
+
+
+
+    });
+    $(".fc-right .fc-button-group").append(
+          '<div class="input-group datetimepicker"><input type="text" class="form-control fc-datepicker" placeholder="YYYY-MM-DD" style="padding: 0;width: 0;border: none;margin: 0;"></div>');
+        $(".fc-datepicker").datepicker({
+          dateFormat: 'yy-mm-dd',
+          showOn: "button",
+          buttonText: '<span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>'
+        });
+  });
+</script>
+</br>
+<style>
+  </br>
+  body {
+    margin: 40px 10px;
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+  }
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .hoverEffect {
+    font-size: 29px;
+    position: absolute;
+    margin: 30px 55px;
+    cursor: pointer;
+}
+.ui-datepicker-trigger
+{
+  background: transparent;
+    border: none;
+    margin: 0!important;
+    padding: 0!important;
+}
+.datetimepicker .input-group-addon {
+    background-color: #f9f9f9;
+    border-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+    height: 2.1em;
+    border: 1px solid #ccc;
+    
+}
+.fc-state-default.fc-corner-right
+{
+  border-radius: 0px;
+}
+</style>
+</head>
+
+<body>
+    <div class="dashboard-container04">
+  <span class="dashboard-text09">
+              <span class="dashboard-text10" style="margin-top: 80px;">EVENTOS ACADEMICOS</span>
+            </span>
+            <p> Es un gusto tenerte aqui, aqui podras conocer el Cronograma de Eventos Disponibles en el Sistema, ademas, una tabla con informacion detallada respecto cada evento</br>
+            conozca info sobre el ponente, fecha de inicio como culminacion, tipo de evento, etc.</p>
+            </div>
+  <div id='calendar' style=""></br></div>
+
+  <table class="table table-dark table-bordered table-hover">
+            <style> .table{ background-color: whitesmoke;}</style>
+      <thead>
+        <tr>
+            <th>Codigo</th>
+          <th>Nombre del Evento</th>
+          <th>Fecha de Inicio</th>
+          <th>Fecha de Fin</th>
+          <th>Descripcion</th>
+          <th>Tipo de Evento</th>
+          <th>Imagen</th>
+      
+          <th>Accion</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        {{#each leventosc}}
+            <tr>
+               <td>{{idp}}</td>
+              <td>{{nombre}}</td>
+            
+              <td>Comienza en: {{timeago fechai}}</td>
+              <td>Finaliza en: {{timeago fechaf}}</td>
+              <td>{{descrp}}</td>
+              <td>{{tipodeEvento}}</td>
+              <td> <img
+              alt="image"
+              src="{{imagen}}"
+              class="dashboard-image"
+            /></td>
+              
+              
+              <td>
+                 <a href="/deleteC/{{idc}}" class="btn btn-danger m-2"> Eliminar Prueba</a>
+                    <a href="/links/edit/{{idc}}" class="btn btn-secondary m-2"> Editar Prueba</a>
+                    </td>
+            </tr>
+            {{/each}}
+      </tbody>
+    </table>
+</body>
+
+      
+
+        <footer class="dashboard-footer">
+          <img
+            alt="sasas"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAh1BMVEXiAxr///3////gAADhAADiABbhAAriABH+8/PqaW/75+b0trjjHCr//PrmSE7zq670urrzsbPypajmQUvnTlbpVl73yMnvkpXpYmj98fDkMjv87OzujZD52tn0v7/jCCHuh4vren3oUlnkIy/lLTn419bwnqDtf4Trc3nqZ2zlPEX74uLrbnSpxnbiAAAEn0lEQVR4nO3d6XKiQBSGYWgBTQyjMSZqTDTrZNH7v76pcpnS0Mtpz2lsyPf+jYiPFQEbbJIEIYTqrVs4My+cUxfOu2HLLcDxhasvIzF/XdMWzl9fxiF7WZqJ2VC5KjvGt+fWubDaLFys3Q9kNe6ahX2VOurZhK6Ft29PceF8ICsIHUForS1C3Yd/+5djYYBtDFloXpognN9pKqtCtRoNZBtdKqJQ3b7d/+x1oGhCNexo6mmEw04mW2dBFv4pKscJnRFVuMiqf9MLNQ9kld3RhdWHZBBCCKFAECYQQgghhOwgTCCEEEII2UGYxCDMdUMg5DxGMc4lzLvljNF2vCtuYcEfTIxemLKDEEIIZYQlo0YIS9Zu0QyMR5ga18IMQgghhBBCfhBCCCGEB8el7mtVD7MciUYqTMdTrzQvOHah5wCNbp2RC/2iD71CCCGEAUaEmyZM8smDV9fmp4pUmHheUfrVPKFf3k8FIYQQQugdhJUghLAlwtxQ0RZh8WroatoOoW0EJW2H0BWEEHoFYZVhFTJGZ+lC075IXyYpnMwvaQ1Y4zRLr/K1nDDJqNfr6FbWhLE2Xk0YL+UF4T4IWyT03N40T1i+P/q0+ts0oZp7XlFKPjqKRjg7w7UYvCDcByE7CE8Own0QsoPw5CDcV5vw3vOw0J1O2NcdYNYkpA460Us1Qu3UdfUIA8z3pxFaZvYLLwwVdWZICCH81cKF/DbmqK3QPVOy+WoBZvnbTdg2RxL598OTo49QwuBzie/W4r5uNBQQoQbkdwbWv3pWYwMur8K2W3ngtSzNQsKdA+rZH/J6Nt+iIpZjGl7q2byzgZAbhDJRhPIffq0w0FoIwnrGadKe+FpmZOH5xtp4PSiq8GzjpbyyCYQQnh6EMkGYQMgIQpkgTH67sCDPAqB54lAzDvxYM+u4tPjsX5PqP2menyzMaCsx9M4RZgPqlzTWL0o6Al8QTxXW86ugDm0l9lcAIYStFzo/5yJC1vbGcn6V8kvnb+Odhp+VmLB367z1srn1veWOx5Rfq5vO72YvYkI185xV8DjLyafzzzjwX2h+kawghBBCCCHkByGEEHoIA10yFIswnS0rN3f3aMk88q5DyPv29OW8YigCISc1hRDC1gtNCX3H52xiZITrZ0OfEwFhNudUSghDz0jHumJoqCSEzk/BGe+0uoAQwpYL6zl/yIonLD6pJ2J1Zw2aIKzrPD4nppAVhDJBmEDIKNiV7EdvUnRC7awRnh1NlhqbUOQHJavDfVN0QoHUI4QQHsYZZm+E0D1NgO1Y9YeQc3P4XeLC4pO1zUsPhEkhsSNU4kKJf61S7KRZfgUhhBCyhKzN8q48nJC1Sd28nvx7IlAwYe/PLaPN88rMGpEGE3Ku/Owe/zvwCyM0Lk0NQgghjEdY9tiV7zELVb8jsOc/evmxCSMbL4XQIwhPDsIEQgipQXhyECa/SXiTVb6eZwGEEselh3lcm/gxrTYRF65GA9lGK6rQMqe/5LcnifEo7fAUQWgprm/A2iCEsOFC90zJAidXgs+UbPndU3fsnJLBsjS9wLNd21bddY/MCwDPOGM5QggF6R+hHI+GbwCCpQAAAABJRU5ErkJggg=="
+            class="dashboard-image2"
+          />
+          <span class="dashboard-text19">
+            2022 -Todos los Derechos Reservados ©
+          </span>
+          <div class="dashboard-icon-group1">
+            <p>Conozca nuestro repositorio:  </p>
+            <i class="fab fa-github" style="font-size:24px;color:red"><a href="https://github.com/MarlonPrado/S.I-de-Gestion-de-Eventos"><span>Github</span></a></i>
+            <i class='fab fa-google-drive' style='font-size:36px'><a href="https://drive.google.com/drive/folders/13ZJQ-3iKCrNpjj5BrHP_97HvRlv8PRzG?usp=sharing"><span>Drive</span></i>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  
+</html>
