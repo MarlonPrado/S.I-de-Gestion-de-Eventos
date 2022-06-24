@@ -1,9 +1,9 @@
-module.exports= {
-    database: {
-        host: 'localhost',
-        user: 'root',
-        password: '1234',
-        database: 'database_gestioneventos'
-
-    }
+module.exports = {
+  database: {
+    host: 'containers-us-west-63.railway.app',
+    user: 'root',
+    password: 'QVVV9iodCcuJVe6GNEQi',
+    database: 'railway',
+    port: 7722
+  }
 }

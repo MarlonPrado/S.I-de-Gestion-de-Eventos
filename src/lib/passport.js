@@ -28,7 +28,7 @@ passport.use('local.registro', new LocalStrategy({
         rol
     }
     newUser.clave = await helpers.encryptPassword(clave);
-    const resultado = await pool.query('INSERT INTO user SET ?', [newUser]);
+    const resultado = await pool.query('INSERT INTO usuarios SET ?', [newUser]);
     console.log(resultado);
     newUser.id = resultado.insertId;
     return done(null,  newUser);
@@ -39,7 +39,7 @@ passport.serializeUser((user,done)=>{
 });
 
 passport.deserializeUser(   async (id, done)=>{
-    const fila = await pool.query('SELECT * FROM user Where id=?', [id]);
+    const fila = await pool.query('SELECT * FROM usuarios Where id=?', [id]);
     done(null, fila[0]);
 });
 
@@ -53,7 +53,7 @@ passport.use('local.login', new LocalStrategy({
     console.log(req.body);
     console.log(correo);
     console.log(clave);
-    const rows = await pool.query('SELECT * FROM user WHERE correo = ?', [correo]);
+    const rows = await pool.query('SELECT * FROM usuarios WHERE correo = ?', [correo]);
     
     if (rows.length > 0){
         

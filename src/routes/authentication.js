@@ -26,7 +26,7 @@ router.post('/add', async (req,res) =>{
     };
 
 
-    await pool.query('INSERT INTO Evento set ?', [NewEvento]);
+    await pool.query('INSERT INTO evento set ?', [NewEvento]);
     res.send('Received');
 });
 
@@ -90,7 +90,7 @@ router.get('/listPaciente' , async(req,res) => {
 
 
 router.get('/ListEventos' , async(req,res) => {
-    const leventos = await pool.query('SELECT * FROM evento');
+    const leventos = await pool.query('SELECT * FROM eventos');
     console.log(leventos);
     res.render('links/ListEvento', { leventos })
 });
@@ -107,7 +107,7 @@ router.get('/login', (req,res) =>{
 
 router.get('/cronograma', async (req,res) =>{
 
-    const leventosc = await pool.query('SELECT * FROM evento');
+    const leventosc = await pool.query('SELECT * FROM eventos');
     console.log(leventosc);
  
     res.render('links/Cronograma', { leventosc})
@@ -118,7 +118,7 @@ router.get('/cronograma', async (req,res) =>{
 
 router.get('/misReservas', async (req,res) =>{
 
-    const leventosc2 = await pool.query('SELECT * FROM evento');
+    const leventosc2 = await pool.query('SELECT * FROM eventos');
     console.log(leventosc2);
     const lreserva = await pool.query('SELECT * FROM reserva');
     console.log(lreserva);
