@@ -19,6 +19,10 @@ function NuevoEvento() {
     const formData = new FormData(event.target);
     const values = Object.fromEntries(formData.entries());
 
+    if(!urlImagen) {
+      return toast.error('Debes subir una imagen');
+    }
+
     fetch('/api/eventos', {
       method: 'POST',
       body: JSON.stringify(values),
@@ -153,7 +157,7 @@ function NuevoEvento() {
                     type="text"
                     className="form-control"
                     name="imagen"
-                    required=""
+                    required
                     placeholder="URL de la imagen"
                     hidden
                     value={urlImagen}
