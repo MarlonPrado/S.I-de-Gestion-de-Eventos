@@ -17,7 +17,7 @@ function Navbar() {
         {user ? (
           <div className="dropdown">
             <button
-              className="btn btn-light dropdown-toggle"
+              className="btn btn-outline-light dropdown-toggle"
               type="button"
               id="dropdownUser"
               data-bs-toggle="dropdown"
