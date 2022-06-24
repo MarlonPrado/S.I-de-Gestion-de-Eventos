@@ -6,18 +6,8 @@ const dtf = Intl.DateTimeFormat('es-CO', {
 });
 
 function CardEvento({ evento, children }) {
-  const hoy = new Date();
-  hoy.setHours(0, 0, 0, 0);
   const fechaInicio = new Date(evento.fechai);
   const fechaFin = new Date(evento.fechaf);
-
-  let badge = 'En curso';
-
-  if (fechaInicio > hoy) {
-    badge = 'Próximo a comenzar';
-  } else if (fechaFin < hoy) {
-    badge = 'Finalizado';
-  }
 
   return (
     <div className="col col-10 d-flex justify-content-end">
@@ -34,7 +24,6 @@ function CardEvento({ evento, children }) {
             <div className="card-body">
               <div className="row">
                 <div className="col">
-                  <span className="badge bg-danger mb-2">{badge}</span>
                   <h2 className="card-title">{evento.nombre}</h2>
                   <p>{evento.descripcion}</p>
                   <hr className="text-danger border-2 opacity-50"></hr>
