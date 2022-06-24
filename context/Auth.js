@@ -15,7 +15,7 @@ export function AuthProvider({ children }) {
     return () => unsubscribe();
   }, []);
 
-  const handleUser = (user) => {
+  const handleUser = async (user) => {
     if (user === null) {
       setUser(null);
       setLoading(false);
@@ -28,15 +28,17 @@ export function AuthProvider({ children }) {
       }
     })
       .then(async (res) => {
-        if (res.ok) {
-          const json = await res.json();
-          user.rol = json.rol;
-          user.cedula = json.cedula;
-          setUser(user);
-          return;
+        if(!res.ok) {
+          signout();
+          toast.error("Esta cuenta no está registrada en el sistema");
         }
 
-        return Promise.reject();
+        const json = await res.json();
+        user = {...user, rol: json.rol, cedula: json.cedula};
+
+        setUser(user);
+        setLoading(false);
+        return user;
       })
       .catch(() => {
         signout();

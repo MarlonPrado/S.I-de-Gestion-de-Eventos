@@ -11,7 +11,9 @@ export default function App({ Component, pageProps }) {
         <title>Eventos UFPS</title>
       </Head>
       <Navbar/>
-      <Component {...pageProps} />
+      <div className="container-fluid py-4">
+        <Component {...pageProps} />
+      </div>
       <Toaster/>
     </AuthProvider>
   );

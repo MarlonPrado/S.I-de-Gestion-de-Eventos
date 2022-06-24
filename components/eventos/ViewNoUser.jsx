@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import CardEvento from 'components/eventos/CardEvento';
 
 function ViewNoUser() {
   const [eventos, setEventos] = useState([]);
@@ -23,24 +24,11 @@ function ViewNoUser() {
   }, []);
 
   return (
-    <div className="container-fluid">
-
-      <div className="row py-4 justify-content-center">
-        <h1 className='text-center mb-4'>Eventos vigentes</h1>
-        {eventos.map((evento) => (
-          <div
-            className="col col-10 d-flex justify-content-end"
-            key={evento.id}
-          >
-            <div className="card mb-4 w-100">
-              <div className="card-body">
-                <h5 className="card-title">{evento.nombre}</h5>
-                <p>{evento.descripcion}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+    <div className="row py-4 justify-content-center">
+      <h1 className="text-center mb-4">Eventos</h1>
+      {eventos.map((evento) => (
+        <CardEvento evento={evento} key={evento.id} />
+      ))}
     </div>
   );
 }

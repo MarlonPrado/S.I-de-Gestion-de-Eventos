@@ -4,9 +4,17 @@ import ViewUser from 'components/eventos/ViewUser';
 import ViewAdmin from 'components/eventos/ViewAdmin';
 
 function HomePage() {
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
 
-  if(user === null) {
+  if (loading) {
+    return <div className="row justify-content-center">
+      <div className="col-auto align-self-center">
+        <span>Cargando...</span>
+      </div>
+    </div>;
+  }
+
+  if(user === null || !user.rol) {
     return <ViewNoUser />;
   }
 

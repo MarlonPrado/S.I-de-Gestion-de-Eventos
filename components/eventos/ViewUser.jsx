@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { useAuth } from 'context/Auth';
+import CardEvento from './CardEvento';
 
 function ViewUser() {
   const { user } = useAuth();
@@ -8,7 +9,7 @@ function ViewUser() {
 
   useEffect(() => {
     obtenerEventos();
-  }, []);
+  }, [user]);
 
   const obtenerEventos = () => {
     fetch('/api/eventos/vigentes', {
@@ -56,37 +57,20 @@ function ViewUser() {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="row py-4 justify-content-center">
-        <h1 className="text-center mb-4">Eventos vigentes</h1>
-        {eventos.map((evento) => (
-          <div
-            className="col col-10 d-flex justify-content-end"
-            key={evento.id}
-          >
-            <div className="card mb-4 w-100">
-              <div className="card-body">
-                <div className="row">
-                  <div className="col">
-                    <h5 className="card-title">{evento.nombre}</h5>
-                    <p>{evento.descripcion}</p>
-                  </div>
-                  {!evento.inscrito ? (
-                    <div className="col-auto align-self-center">
-                      <button
-                        className="btn btn-danger"
-                        onClick={() => handleInscripcion(evento.id)}
-                      >
-                        Inscribirse
-                      </button>
-                    </div>
-                  ) : null}
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+    <div className="row py-4 justify-content-center">
+      <h1 className="text-center mb-4">Eventos</h1>
+      {eventos.map((evento) => (
+        <CardEvento evento={evento} key={evento.id}>
+          {!evento.inscrito && new Date(evento.fechaf) > new Date() && (
+            <button
+              className="btn btn-danger"
+              onClick={() => handleInscripcion(evento.id)}
+            >
+              Inscribirse
+            </button>
+          )}
+        </CardEvento>
+      ))}
     </div>
   );
 }
