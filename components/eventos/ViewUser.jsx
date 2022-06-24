@@ -61,7 +61,7 @@ function ViewUser() {
       <h1 className="text-center mb-4">Eventos</h1>
       {eventos.map((evento) => (
         <CardEvento evento={evento} key={evento.id}>
-          {!evento.inscrito && new Date(evento.fechai) < new Date() && (
+          {!evento.inscrito && new Date(evento.fechai) > new Date() && (
             <button
               className="btn btn-danger"
               onClick={() => handleInscripcion(evento.id)}
