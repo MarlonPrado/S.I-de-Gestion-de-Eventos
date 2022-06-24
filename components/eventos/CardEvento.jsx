@@ -1,18 +1,21 @@
 const dtf = Intl.DateTimeFormat('es-CO', {
   month: '2-digit',
   day: '2-digit',
-  year: 'numeric'
+  year: 'numeric',
+  timeZone: 'UTC'
 });
 
 function CardEvento({ evento, children }) {
+  const hoy = new Date();
+  hoy.setHours(0, 0, 0, 0);
   const fechaInicio = new Date(evento.fechai);
   const fechaFin = new Date(evento.fechaf);
 
   let badge = 'En curso';
 
-  if (fechaInicio > new Date()) {
+  if (fechaInicio > hoy) {
     badge = 'Próximo a comenzar';
-  } else if (fechaFin < new Date()) {
+  } else if (fechaFin < hoy) {
     badge = 'Finalizado';
   }
 
@@ -24,7 +27,7 @@ function CardEvento({ evento, children }) {
             <img
               src={evento.imagen}
               className="img-fluid rounded-start"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ objectFit: 'cover' }}
             />
           </div>
           <div className="col-8">
